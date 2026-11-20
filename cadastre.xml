@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="3251" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://magosm.magellium.com/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0" updateSequence="1" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd">
   <Service>
     <Name>WMS</Name>
-    <Title>magOSM WMS Service (static copy test)</Title>
-    <Abstract>Static copy for FieldMaster test</Abstract>
+    <Title>Armenia Cadastre WMS</Title>
+    <Abstract>Cadastre Committee of RA - geoportal.am</Abstract>
     <KeywordList/>
-    <OnlineResource xlink:type="simple" xlink:href="https://magosm.magellium.com/geoserver/"/>
+    <OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/"/>
     <ContactInformation>
       <ContactPersonPrimary>
         <ContactPerson/>
@@ -31,39 +32,33 @@
       <GetCapabilities>
         <Format>text/xml</Format>
         <DCPType>
-          <HTTP>
-            <Get>
-              <OnlineResource xlink:type="simple" xlink:href="https://magosm.magellium.com/geoserver/ows?SERVICE=WMS&amp;"/>
-            </Get>
-            <Post>
-              <OnlineResource xlink:type="simple" xlink:href="https://magosm.magellium.com/geoserver/ows?SERVICE=WMS&amp;"/>
-            </Post>
-          </HTTP>
-        </DCPType>
+            <HTTP>
+              <Get><OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?SERVICE=WMS&amp;"/></Get>
+              <Post><OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?SERVICE=WMS&amp;"/></Post>
+            </HTTP>
+          </DCPType>
       </GetCapabilities>
       <GetMap>
         <Format>image/png</Format>
         <Format>image/jpeg</Format>
         <Format>image/png; mode=8bit</Format>
         <DCPType>
-          <HTTP>
-            <Get>
-              <OnlineResource xlink:type="simple" xlink:href="https://magosm.magellium.com/geoserver/ows?SERVICE=WMS&amp;"/>
-            </Get>
-          </HTTP>
-        </DCPType>
+            <HTTP>
+              <Get><OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?SERVICE=WMS&amp;"/></Get>
+              <Post><OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?SERVICE=WMS&amp;"/></Post>
+            </HTTP>
+          </DCPType>
       </GetMap>
       <GetFeatureInfo>
         <Format>text/plain</Format>
         <Format>application/vnd.ogc.gml</Format>
         <Format>text/html</Format>
         <DCPType>
-          <HTTP>
-            <Get>
-              <OnlineResource xlink:type="simple" xlink:href="https://magosm.magellium.com/geoserver/ows?SERVICE=WMS&amp;"/>
-            </Get>
-          </HTTP>
-        </DCPType>
+            <HTTP>
+              <Get><OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?SERVICE=WMS&amp;"/></Get>
+              <Post><OnlineResource xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?SERVICE=WMS&amp;"/></Post>
+            </HTTP>
+          </DCPType>
       </GetFeatureInfo>
     </Request>
     <Exception>
@@ -72,88 +67,90 @@
       <Format>BLANK</Format>
     </Exception>
     <Layer>
-      <Title>magOSM WMS Service</Title>
-      <Abstract>Static copy for FieldMaster test</Abstract>
-      <CRS>CRS:84</CRS>
+      <Title>Armenia Cadastre WMS</Title>
+      <Abstract>Cadastre Committee of RA - geoportal.am</Abstract>
       <CRS>EPSG:3857</CRS>
-      <CRS>EPSG:4326</CRS>
       <CRS>EPSG:900913</CRS>
       <EX_GeographicBoundingBox>
-        <westBoundLongitude>-180.00000000000003</westBoundLongitude>
-        <eastBoundLongitude>180.00000000000003</eastBoundLongitude>
-        <southBoundLatitude>-85.06</southBoundLatitude>
-        <northBoundLatitude>85.06</northBoundLatitude>
+        <westBoundLongitude>43.4</westBoundLongitude>
+        <eastBoundLongitude>46.7</eastBoundLongitude>
+        <southBoundLatitude>38.8</southBoundLatitude>
+        <northBoundLatitude>41.35</northBoundLatitude>
       </EX_GeographicBoundingBox>
-      <BoundingBox CRS="CRS:84" minx="-180.00000000000003" miny="-85.06" maxx="180.00000000000003" maxy="85.06"/>
-      <Layer queryable="0">
-        <Name>citymap:niveau_1</Name>
-        <Title>Niveau 1</Title>
+      <BoundingBox CRS="CRS:84" minx="43.4" miny="38.8" maxx="46.7" maxy="41.35"/>
+      <BoundingBox CRS="EPSG:3857" minx="4831265.9" miny="4693063.6" maxx="5198620.2" maxy="5064104.5"/>
+      <Layer queryable="1">
+        <Name>Real_estate</Name>
+        <Title>Cadastre - parcels and buildings</Title>
         <Abstract/>
         <KeywordList/>
         <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:900913</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-180.00000000000003</westBoundLongitude>
-          <eastBoundLongitude>180.00000000000003</eastBoundLongitude>
-          <southBoundLatitude>-85.06</southBoundLatitude>
-          <northBoundLatitude>85.06</northBoundLatitude>
+          <westBoundLongitude>43.4</westBoundLongitude>
+          <eastBoundLongitude>46.7</eastBoundLongitude>
+          <southBoundLatitude>38.8</southBoundLatitude>
+          <northBoundLatitude>41.35</northBoundLatitude>
         </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-180.00000000000003" miny="-85.06" maxx="180.00000000000003" maxy="85.06"/>
-        <BoundingBox CRS="EPSG:3857" minx="-2.0037508342789244E7" miny="-2.00489661040146E7" maxx="2.0037508342789244E7" maxy="2.0048966104014594E7"/>
+        <BoundingBox CRS="CRS:84" minx="43.4" miny="38.8" maxx="46.7" maxy="41.35"/>
+        <BoundingBox CRS="EPSG:3857" minx="4831265.9" miny="4693063.6" maxx="5198620.2" maxy="5064104.5"/>
         <Style>
-          <Name>default-style-citymap:niveau_1</Name>
-          <Title>citymap:niveau_1 style</Title>
-          <Abstract>Default style for citymap:niveau_1 layer</Abstract>
+          <Name>generic</Name>
+          <Title>Real_estate style</Title>
+          <Abstract>Default style for Real_estate layer</Abstract>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://magosm.magellium.com/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=citymap%3Aniveau_1"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Real_estate"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="0">
-        <Name>citymap:niveau_2</Name>
-        <Title>Niveau 2</Title>
+        <Name>Ortho_2021:Yerevan_2021</Name>
+        <Title>Orthophoto Yerevan 2021</Title>
         <Abstract/>
         <KeywordList/>
         <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:900913</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-180.00000000000003</westBoundLongitude>
-          <eastBoundLongitude>180.00000000000003</eastBoundLongitude>
-          <southBoundLatitude>-85.06</southBoundLatitude>
-          <northBoundLatitude>85.06</northBoundLatitude>
+          <westBoundLongitude>44.35</westBoundLongitude>
+          <eastBoundLongitude>44.65</eastBoundLongitude>
+          <southBoundLatitude>40.05</southBoundLatitude>
+          <northBoundLatitude>40.3</northBoundLatitude>
         </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-180.00000000000003" miny="-85.06" maxx="180.00000000000003" maxy="85.06"/>
-        <BoundingBox CRS="EPSG:3857" minx="-2.0037508342789244E7" miny="-2.00489661040146E7" maxx="2.0037508342789244E7" maxy="2.0048966104014594E7"/>
+        <BoundingBox CRS="CRS:84" minx="44.35" miny="40.05" maxx="44.65" maxy="40.3"/>
+        <BoundingBox CRS="EPSG:3857" minx="4937019.4" miny="4873210.8" maxx="4970415.3" maxy="4909633.7"/>
         <Style>
-          <Name>default-style-citymap:niveau_2</Name>
-          <Title>citymap:niveau_2 style</Title>
-          <Abstract>Default style for citymap:niveau_2 layer</Abstract>
+          <Name>raster</Name>
+          <Title>Ortho_2021:Yerevan_2021 style</Title>
+          <Abstract>Default style for Ortho_2021:Yerevan_2021 layer</Abstract>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://magosm.magellium.com/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=citymap%3Aniveau_2"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ortho_2021%3AYerevan_2021"/>
           </LegendURL>
         </Style>
       </Layer>
-      <Layer queryable="0">
-        <Name>citymap:niveau_3</Name>
-        <Title>Niveau 3</Title>
+      <Layer queryable="1">
+        <Name>arpis:USER_GEONAMES_GEOMETRY</Name>
+        <Title>Geographic names</Title>
         <Abstract/>
         <KeywordList/>
         <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:900913</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-180.00000000000003</westBoundLongitude>
-          <eastBoundLongitude>180.00000000000003</eastBoundLongitude>
-          <southBoundLatitude>-85.06</southBoundLatitude>
-          <northBoundLatitude>85.06</northBoundLatitude>
+          <westBoundLongitude>43.4</westBoundLongitude>
+          <eastBoundLongitude>46.7</eastBoundLongitude>
+          <southBoundLatitude>38.8</southBoundLatitude>
+          <northBoundLatitude>41.35</northBoundLatitude>
         </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-180.00000000000003" miny="-85.06" maxx="180.00000000000003" maxy="85.06"/>
-        <BoundingBox CRS="EPSG:3857" minx="-2.0037508342789244E7" miny="-2.00489661040146E7" maxx="2.0037508342789244E7" maxy="2.0048966104014594E7"/>
+        <BoundingBox CRS="CRS:84" minx="43.4" miny="38.8" maxx="46.7" maxy="41.35"/>
+        <BoundingBox CRS="EPSG:3857" minx="4831265.9" miny="4693063.6" maxx="5198620.2" maxy="5064104.5"/>
         <Style>
-          <Name>default-style-citymap:niveau_3</Name>
-          <Title>citymap:niveau_3 style</Title>
-          <Abstract>Default style for citymap:niveau_3 layer</Abstract>
+          <Name>generic</Name>
+          <Title>arpis:USER_GEONAMES_GEOMETRY style</Title>
+          <Abstract>Default style for arpis:USER_GEONAMES_GEOMETRY layer</Abstract>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://magosm.magellium.com/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=citymap%3Aniveau_3"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.am/gs/wms?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=arpis%3AUSER_GEONAMES_GEOMETRY"/>
           </LegendURL>
         </Style>
       </Layer>
